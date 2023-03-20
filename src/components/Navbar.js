@@ -13,7 +13,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <Disclosure as="nav" className="bg-[#004e36]">
       {({ open }) => (
@@ -71,8 +71,6 @@ export default function Navbar() {
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
-
-                {/* Profile dropdown */}
                
               </div>
             </div>
@@ -96,6 +94,7 @@ export default function Navbar() {
               ))}
             </div>
           </Disclosure.Panel>
+          
         </>
       )}
     </Disclosure>
