@@ -1,3 +1,9 @@
-export default function HomePage() {
-    return <div className = "place-content-center font-40">home page</div>;
+import SearchBar from '../components/SearchBar';
+
+function HomePage() {
+    return(
+        <SearchBar placeholder = "Find your cheapest groccery!"/>
+    );
 }
+
+export default HomePage;
