@@ -29,9 +29,9 @@ function SearchBar({placeholder, data}) {
                 </div>
             </div>
             {filiteredData.length != 0 && (
-            <div className = "dataResult absolute bottom-48 left-32 ">
+            <div className = " ">
                 {filiteredData.slice(0, 5).map((value, key) => {
-                    return <div className = "">{value.groccery} </div>;
+                    return <div>{value.groccery} </div>;
                 })}
             </div>
             )}
