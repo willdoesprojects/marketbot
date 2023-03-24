@@ -5,7 +5,6 @@ import logo from './logo.PNG';
 import { Block } from '@mui/icons-material';
 
 const navigation = [
-{ name: 'Marketbot', href: './', current: false },
   { name: 'Find a Store', href: '#', current: false },
   { name: 'Cart', href: '#', current: false },
   { name: 'About Us', href: './AboutUs', current: false },
@@ -24,8 +23,8 @@ export default function Navbar(prop1, prop2) {
     <Disclosure as="nav" className="bg-[#004fff] flex">
       {({ open }) => (
         <>
-
           <div class="logo">
+            <a href="./">
             <img 
                 src={logo} alt="logo.png" 
                 style={{
@@ -36,7 +35,8 @@ export default function Navbar(prop1, prop2) {
                   left: `${4}px`,
                   position: "absolute"
                 }}
-            />;
+            />
+            </a>
           </div>
 
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
