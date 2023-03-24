@@ -1,6 +1,8 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import logo from './logo.PNG';
+import { Block } from '@mui/icons-material';
 
 const navigation = [
 { name: 'Marketbot', href: './', current: false },
@@ -8,8 +10,6 @@ const navigation = [
   { name: 'Cart', href: '#', current: false },
   { name: 'About Us', href: './AboutUs', current: false },
 ]
-
-
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -21,9 +21,24 @@ export default function Navbar(prop1, prop2) {
     {name: 'Hello', href: '#', current: prop2 = false}
   ]
   return (
-    <Disclosure as="nav" className="bg-[#004e36]">
+    <Disclosure as="nav" className="bg-[#004fff] flex">
       {({ open }) => (
         <>
+
+          <div class="logo">
+            <img 
+                src={logo} alt="logo.png" 
+                style={{
+                  height: `${45}px`,
+                  width: `${45}px`,
+                  padding: `${1}px`,
+                  top: `${5}px`,
+                  left: `${4}px`,
+                  position: "absolute"
+                }}
+            />;
+          </div>
+
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
@@ -46,10 +61,14 @@ export default function Navbar(prop1, prop2) {
                   </div>
                 </div>
               </div>
-              
+
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <div>
-                  <input type = "text" className = "rounded-full py-1 px-1 text-black dark:text-black-dark border-white" placeholder = "Zipcode" maxLength={5}></input>
+                  <input type = "text" 
+                         className = "rounded-full py-1 px-1 text-black dark:text-black-dark border-white" 
+                         placeholder = "Zipcode" 
+                         maxLength={5}>
+                  </input>
                 </div>
                   <div className = "signin ">
                 
