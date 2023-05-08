@@ -11,7 +11,7 @@ function Employees() {
         role: "CEO", 
         img: "https://media.licdn.com/dms/image/D4E35AQE65Z3De7tXaw/profile-framedphoto-shrink_200_200/0/1677099755237?e=1679382000&v=beta&t=fs2sVEAGGJmkALKbYNjIIItgzNi-HKfKxNAMF_V_QOs"
       },
-
+      
       {
         name: "Ye Hun Joo", 
         role: "CFO", 
@@ -32,7 +32,6 @@ function Employees() {
     ]
   );
   return (
-
     <div className="App ">
         <input type='text' onChange={(e) => {
           console.log(e.target.value);
@@ -52,5 +51,4 @@ function Employees() {
     </div>
   );
 }
-
 export default Employees;
