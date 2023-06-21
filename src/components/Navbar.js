@@ -16,7 +16,7 @@ function classNames(...classes) {
 
 export default function Navbar(prop1, prop2) {
   const signin = [
-    {name: 'Sign In', href: './SignIn', current: prop1 = true},
+    {name: 'Sign In', href: './SignIn ', current: prop1 = true},
     {name: 'Hello', href: '#', current: prop2 = false}
   ]
   return (
