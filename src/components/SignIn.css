@@ -1,6 +1,30 @@
 .imageLogo {
-    height: 45px;
-    width: 45px;
-    position: relative;
-    background-position-x: center;
+    height: 80px;
+    width: 80px;
+}
+
+.create>p {
+    font-size: 19px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.31;
+    letter-spacing: normal;
+    color: #000;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.links a {
+    flex: 1;
+    color: #321aca;
+    font-family: "WhitneySSm";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+    letter-spacing: normal;
 }

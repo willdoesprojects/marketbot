@@ -1,12 +1,17 @@
 import { Fragment } from 'react'
+import {useState} from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from './logo.PNG';
 import { Block } from '@mui/icons-material';
+import { SignIn } from './SignIn.js';
+import userEvent from '@testing-library/user-event';
+import loginData from '../LoginData.json';
+
 
 const navigation = [
-  { name: 'Find a Store', href: '#', current: false },
-  { name: 'Cart', href: '#', current: false },
+  { name: 'Find a Store', href: './findstore', current: false },
+  { name: 'Cart', href: './cart', current: false },
   { name: 'About Us', href: './AboutUs', current: false },
 ]
 
@@ -14,11 +19,33 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar(prop1, prop2) {
+//prop3 = 0
+export default function Navbar(props) {
+  let isLoggedIn = props.isLoggedIn;
+
+  let userId = props.userId;
+
+  const userName = localStorage.getItem('userName');
+
+  if (isLoggedIn) {
+    localStorage.setItem('userName', loginData[userId].name);
+    
+  }
+
+  console.log(userId);
+
+
   const signin = [
-    {name: 'Sign In', href: './SignIn ', current: prop1 = true},
-    {name: 'Hello', href: '#', current: prop2 = false}
+    {name: 'Sign In', href: './SignIn', current: props = !isLoggedIn},
+    {name: 'Hello ' + userName , href: './profile', current: props = isLoggedIn}
   ]
+
+  // if (prop3.isLoggedIn != null) {
+  //   const isLoggedIn = prop3.isLoggedIn;
+  // }
+  
+
+  
   return (
     <Disclosure as="nav" className="bg-[#004fff] flex">
       {({ open }) => (
@@ -64,16 +91,19 @@ export default function Navbar(prop1, prop2) {
 
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <div>
-                  <input type = "text" 
-                         className = "rounded-full py-1 px-1 text-black dark:text-black-dark border-white" 
-                         placeholder = "Zipcode" 
-                         maxLength={5}>
-                  </input>
+                  <form>
+                    <input 
+                          type = "text" 
+                          className = "rounded-full py-1 px-1 text-black dark:text-black-dark border-white" 
+                          placeholder = "Zipcode" 
+                          maxLength={5}>
+                          
+                    </input>
+                  </form>
                 </div>
                   <div className = "signin ">
                 
                       {signin.map((item) => {
-                        console.log(item.name + " " + item.current);
                         if (item.current == true) {
 
                           return (

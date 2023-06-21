@@ -1,17 +1,35 @@
-[
+{
+  "groceries": [
       {
-        "groccery": "banana"
+        "id": 1,
+        "groccery": "bananas",
+        "price": 0.25,
+        "image": "https://m.media-amazon.com/images/I/61fZ+YAYGaL._SX679_.jpg"
+        
       },
       {
-        "groccery": "apples"
+        "id": 2,
+        "groccery": "apples",
+        "price": 0.45,
+        "image": "https://media.istockphoto.com/id/622795204/photo/red-delicious-apples.jpg?s=612x612&w=0&k=20&c=-uu4u0m62t1nz3kcOVkallOgSWoOj_KtcVTCIlyfpXY="
       },
       {
-        "groccery": "egg"
+        "id": 3,
+        "groccery": "egg",
+        "price": 0.35,
+        "image": "https://img.freepik.com/free-photo/three-fresh-organic-raw-eggs-isolated-white-surface_114579-43677.jpg?w=2000"
       },
       {
-        "groccery": "milk"
+        "id": 4,
+        "groccery": "milk",
+        "price": 1.99,
+        "image": "https://i5.walmartimages.com/asr/3592de4c-2d2d-4285-afbf-f0508775bd58_2.bb23225176016b4d5ce96c4efed80382.jpeg"
       },
       {
-        "groccery": "banana"
+        "id": 5,
+        "groccery": "potatoes",
+        "price": 0.88,
+        "image": "https://media.istockphoto.com/id/157430678/photo/three-potatoes.jpg?s=612x612&w=0&k=20&c=qkMoEgcj8ZvYbzDYEJEhbQ57v-nmkHS7e88q8dv7TSA="
       }
-]
+    ]
+}

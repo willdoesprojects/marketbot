@@ -21,9 +21,9 @@ function SearchBar({placeholder, data}) {
         
     };
     return (
-        <div className ="search relative h-screen">
-            <div className="searchInputs absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5">
-                <input type="text" class = "w-full border-12 border-black rounded-full py-2 px-4 outline-black text-black dark:text-black-dark" placeHolder={placeholder} onChange={handleFilter} maxLength={15}/>
+        <div className ="search relative mb-5 mt-4">
+            <div className="searchInputs absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3">
+                <input type="text" class = "w-full border border-black rounded-full py-2 px-4 outline-black text-black dark:text-black-dark" placeHolder={placeholder} onChange={handleFilter} maxLength={15}/>
                 <div className="searchIcon absolute top-1/2 transform -translate-y-1/2 right-4">
                     <SearchIcon />
                 </div>
